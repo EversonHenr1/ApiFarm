@@ -7,6 +7,8 @@ const rotaReceita = require("./routes/receita")
 const rotaUsuario = require("./routes/usuario");
 const rotaIngrediente = require("./routes/ingrediente")
 const rotaProcedimento = require("./routes/procedimento")
+const rotaLike = require("./routes/like")
+
 
 app.use(morgan("dev")) // Irá dar um feedback de todos os requerimentos que ocorreram
 app.use(express.urlencoded({ extended: false })) //Pode utiilzar parametros na url
@@ -31,6 +33,7 @@ app.use((req,res,next)=>{
 app.use("/recipe",rotaReceita)
 app.use("/ingredient",rotaIngrediente)
 app.use("/proceeding",rotaProcedimento)
+app.use("/like",rotaLike)
 app.use("/user",rotaUsuario)
 
 //Não foi possivel localizar a rota enviada (Cria um novo erro e envia para o proximo)

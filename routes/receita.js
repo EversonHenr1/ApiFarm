@@ -1,5 +1,6 @@
 const { default: axios } = require("axios");
 const express = require("express");
+const res = require("express/lib/response");
 const router = express.Router(); // Utilizando o metodo Router do express
 const mysql = require("../mysql").pool;
 const authenticateToken = require("./authenticateToken")
@@ -84,6 +85,8 @@ router.patch("/", authenticateToken, (req,res,next)=>{
         })
     }) 
 })
+
+
 
 
 //Adicionar uma receita
