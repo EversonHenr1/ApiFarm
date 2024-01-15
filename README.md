@@ -1,2 +1,0 @@
-# ApiFarm
-Api aplicativo farma
